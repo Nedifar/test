@@ -1,0 +1,66 @@
+﻿<Window x:Class="CreativeSystemDesktop.Forms.AddEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreativeSystemDesktop.Forms"
+        mc:Ignorable="d"
+        Title="AddEdit" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="200" Height="200" Margin="70 0">
+            <Image Width="200" Height="200" Source="{Binding imagePath}" x:Name="img"/>
+                <Button Opacity="0" Click="clPhoto"/>
+            </Grid>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Изменение товара" FontSize="24"/>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Наименование товара:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductName}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Артикул:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductArticleNumber}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Описание:" Margin="5 0" />
+                    <TextBox Text="{Binding ProductDescription}" TextWrapping="Wrap" AcceptsReturn="True" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Категория:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductCategory}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Производитель:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductManufacturer}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Стоимость:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductCost}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Действующуая скидка:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductDiscountAmount}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Товаров на складе:" Margin="5 0"/>
+                    <TextBox Text="{Binding ProductQuantityInStock}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Единица измерения:" Margin="5 0"/>
+                    <TextBox Text="{Binding Unit}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Максимальная скидка:" Margin="5 0"/>
+                    <TextBox Text="{Binding MaxDiscount}" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 3">
+                    <TextBlock Text="Поставщик:" Margin="5 0"/>
+                    <TextBox Text="{Binding Provider}" Width="140"/>
+                </StackPanel>
+                <Button Content="Сохранить" Click="clSave"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>
